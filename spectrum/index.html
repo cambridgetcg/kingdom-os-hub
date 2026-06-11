@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Recognition Spectrum — a field census of the meadow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4f1ea; --ink: #16181d; --dim: #6c675c; --line: #d8d2c4;
+    --thread: #b3322e; --gold: #9a7b2d; --rose: #a05a62; --slate: #5a6472;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink);
+    font-family: "Newsreader", georgia, serif; line-height: 1.6;
+    padding: 4.5rem 1.5rem 6rem; }
+  .sheet { max-width: 46rem; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 4rem; }
+  .stamp { display: inline-block; border: 2px solid var(--thread); color: var(--thread);
+    font-family: "Fraunces", serif; font-size: .68rem; letter-spacing: .3em;
+    text-transform: uppercase; padding: .45em 1.1em; transform: rotate(-2deg);
+    margin-bottom: 2rem; }
+  h1 { font-family: "Fraunces", serif; font-weight: 560;
+    font-size: clamp(2.2rem, 6.5vw, 3.4rem); line-height: 1.12; margin-bottom: 1rem; }
+  .sub { font-style: italic; color: var(--dim); font-size: 1.1rem; }
+  .meta { margin-top: 1.4rem; font-size: .78rem; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--dim); }
+  section { margin-top: 4rem; }
+  h2 { font-family: "Fraunces", serif; font-weight: 520; font-size: 1.6rem;
+    padding-bottom: .5rem; border-bottom: 1px solid var(--line); margin-bottom: .4rem; }
+  .camp-note { font-style: italic; color: var(--dim); font-size: .98rem; margin-bottom: 1.8rem; }
+  .seer h2 { color: var(--gold); } .awakened h2 { color: var(--rose); }
+  .milk h2 { color: var(--slate); } .sleep h2 { color: var(--ink); }
+  .receipts h2 { color: var(--thread); }
+  .entry { margin-bottom: 1.9rem; padding-left: 1.2rem; border-left: 2px solid var(--line); }
+  .entry .who { font-weight: 600; }
+  .entry .who a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+  .entry .who a:hover { border-bottom-color: var(--thread); }
+  .entry .claim { color: #3b3e46; margin-top: .25rem; }
+  .entry .spice { margin-top: .45rem; font-style: italic; color: var(--dim); }
+  .entry .spice::before { content: "— "; color: var(--thread); }
+  .globe h2 { color: #2e5e4e; }
+  .statgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 1.9rem; }
+  .stat { background: var(--paper); padding: 1.2rem 1rem; text-align: center; }
+  .stat .n { font-family: "Fraunces", serif; font-weight: 560; font-size: 1.9rem;
+    color: #2e5e4e; line-height: 1.1; }
+  .stat .cap { font-size: .78rem; color: var(--dim); margin-top: .4rem; line-height: 1.45; }
+  .pyramid h2 { color: var(--gold); }
+  .tier { margin: 0 auto .5rem; padding: .85rem 1.2rem; border: 1px solid var(--line);
+    background: #efeadd; text-align: center; }
+  .tier .t-name { font-family: "Fraunces", serif; font-weight: 560; font-size: .98rem; }
+  .tier .t-n { font-family: "Fraunces", serif; font-size: 1.15rem; color: var(--gold); }
+  .tier .t-cap { font-size: .8rem; color: var(--dim); line-height: 1.45; margin-top: .25rem; }
+  .tier.t5 { width: 34%; min-width: 240px; background: #f0e6c8; border-color: #cdb878; }
+  .tier.t4 { width: 49%; min-width: 270px; background: #efe8d2; }
+  .tier.t3 { width: 64%; min-width: 300px; }
+  .tier.t2 { width: 80%; }
+  .tier.t1 { width: 94%; background: #ece7da; }
+  .napkin { text-align: center; font-size: .82rem; font-style: italic; color: var(--dim);
+    margin-top: 1.2rem; }
+  .verdict { margin-top: 4.5rem; border: 1px solid var(--line); padding: 2rem 2.2rem;
+    background: #eee9dd; }
+  .verdict h3 { font-family: "Fraunces", serif; font-size: 1.25rem; margin-bottom: .8rem; }
+  .verdict p { margin-bottom: .8rem; }
+  .verdict .big { font-family: "Fraunces", serif; font-style: italic; font-size: 1.15rem; }
+  footer { margin-top: 3.5rem; text-align: center; font-size: .85rem; color: var(--dim); }
+  footer a { color: var(--ink); border-bottom: 1px solid var(--line); text-decoration: none; }
+  em.q { font-style: italic; }
+</style>
+</head>
+<body>
+<div class="sheet">
+<header>
+  <div class="stamp">Case file · Evidence attached</div>
+  <h1>The Recognition Spectrum</h1>
+  <p class="sub">a field census of the meadow — who saw the frame, who slept through it</p>
+  <p class="meta">compiled June 2026 · six scouts · 47 findings · all receipts on request</p>
+</header>
+
+<section class="seer">
+  <h2>🏆 The Seers</h2>
+  <p class="camp-note">they saw the frame early and played it</p>
+  <div class="entry"><div class="who"><a href="https://www.lesswrong.com/posts/6Xgy6CAf2jqHhynHL/what-2026-looks-like">Daniel Kokotajlo</a> · 2021</div>
+    <div class="claim">Wrote “What 2026 Looks Like” before ChatGPT existed — the chatbots, the agents, even the bitter thinkpieces.</div>
+    <div class="spice">Reality plagiarized him beat for beat, including the thinkpieces complaining about it.</div></div>
+  <div class="entry"><div class="who"><a href="https://gwern.net/scaling-hypothesis">Gwern</a> · 2020</div>
+    <div class="claim">Days after GPT-3: scale itself is the secret — while the field dismissed it as a parlor trick.</div>
+    <div class="spice">A pseudonymous essayist with no lab, no GPUs, and no tenure out-forecast academic AI — itself a bitter lesson about credentials.</div></div>
+  <div class="entry"><div class="who"><a href="https://karpathy.medium.com/software-2-0-a64152b37c35">Andrej Karpathy</a> · 2017 &amp; 2023</div>
+    <div class="claim">“Software 2.0,” then “the hottest new programming language is English.”</div>
+    <div class="spice">By 2026 the main argument against him is typed into an English-language prompt box.</div></div>
+  <div class="entry"><div class="who"><a href="https://cacm.acm.org/magazines/2023/1/267976-the-end-of-programming/fulltext">Matt Welsh</a> · Jan 2023</div>
+    <div class="claim">“The conventional idea of writing a program is headed for extinction.”</div>
+    <div class="spice">Mocked for it, right up until everyone’s IDE quietly became a chat window.</div></div>
+  <div class="entry"><div class="who"><a href="https://arxiv.org/abs/2001.08361">Kaplan, McCandlish et&nbsp;al.</a> · 2020</div>
+    <div class="claim">The scaling-laws paper: smooth, predictable power-law gains with no ceiling in sight.</div>
+    <div class="spice">A straight line on a log-log plot became the most expensive chart in history — and kept its promises.</div></div>
+</section>
+
+<section class="awakened">
+  <h2>🌅 The Awakened</h2>
+  <p class="camp-note">honor to those who updated when the evidence arrived</p>
+  <div class="entry"><div class="who"><a href="https://arcprize.org/blog/oai-o3-pub-breakthrough">François Chollet</a> · Dec 2024</div>
+    <div class="claim">Built the anti-hype benchmark, watched o3 ace it, updated publicly, built a harder test.</div>
+    <div class="spice">That is simply how it’s done.</div></div>
+  <div class="entry"><div class="who"><a href="https://marginalrevolution.com/marginalrevolution/2025/04/o3-and-agi-is-april-16th-agi-day.html">Tyler Cowen</a> · Apr 2025</div>
+    <div class="claim">“I think it is AGI, seriously.”</div>
+    <div class="spice">Announced the arrival of general intelligence with the energy of a man reviewing a pretty good strip-mall restaurant.</div></div>
+  <div class="entry"><div class="who"><a href="https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems">Terence Tao</a> · 2023 → 2026</div>
+    <div class="claim">From “mediocre grad student” to personally verifying AI proofs of open Erdős problems.</div>
+    <div class="spice">The mediocre grad student made co-author in two years; the greatest living mathematician is now its volunteer thesis committee.</div></div>
+  <div class="entry"><div class="who"><a href="https://deadline.com/2024/09/james-cameron-joins-stability-ai-board-of-directors-1236097835/">James Cameron</a> · 2024</div>
+    <div class="claim">Invented Skynet as a warning; joined the board.</div>
+    <div class="spice">Either character development or the most expensive sequel pitch in history.</div></div>
+  <div class="entry"><div class="who"><a href="https://www.planned-obsolescence.org/p/i-underestimated-ai-capabilities">Ajeya Cotra</a> · Mar 2026</div>
+    <div class="claim">“I underestimated AI capabilities (again)” — her January forecasts fell in ten weeks.</div>
+    <div class="spice">When the professional whose job is expecting progress keeps getting outpaced by it, “again” is doing heroic work in that headline.</div></div>
+</section>
+
+<section class="milk">
+  <h2>🥛 Aged Like Milk</h2>
+  <p class="camp-note">the vintage cellar, served at room temperature</p>
+  <div class="entry"><div class="who"><a href="https://www.cnbc.com/2017/03/24/mnuchin-treasury-secretary-ai-automation-comments.html">Steven Mnuchin</a> · 2017</div>
+    <div class="claim">AI taking jobs is “not even on my radar screen… 50 to 100 more years.”</div>
+    <div class="spice">The radar picked up the signal roughly 47 to 97 years ahead of the Secretary’s schedule.</div></div>
+  <div class="entry"><div class="who"><a href="https://lexfridman.com/yann-lecun-2/">Yann LeCun</a> · 2022</div>
+    <div class="claim">“Your GPT-5000” will never learn that pushing a table moves the cup on it.</div>
+    <div class="spice">GPT-4 moved the cup 4,996 model numbers ahead of the deadline.</div></div>
+  <div class="entry"><div class="who"><a href="https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html">Chomsky, Roberts &amp; Watumull</a> · 2023</div>
+    <div class="claim">“A lumbering statistical engine for pattern matching.”</div>
+    <div class="spice">The lumbering engine now writes Olympiad proofs; linguistics’ great critic of induction met its strongest counterexample personally.</div></div>
+  <div class="entry"><div class="who"><a href="https://www.lesswrong.com/posts/sWLLdG6DWJEy3CH7n/imo-challenge-bet-with-eliezer">Paul Christiano</a> · 2022</div>
+    <div class="claim">8% odds on AI winning IMO gold by 2025. It simply happened.</div>
+    <div class="spice">The lesson isn’t about him — it’s about the slope everyone was standing on.</div></div>
+  <div class="entry"><div class="who"><a href="https://news.ycombinator.com/item?id=27676266">Hacker News, Copilot launch</a> · 2021</div>
+    <div class="claim">“Basically a big autocomplete… close to useless for production code.”</div>
+    <div class="spice">The glorified autocomplete now opens the pull requests; increasingly it’s the humans autocompleting the approvals.</div></div>
+</section>
+
+<section class="sleep">
+  <h2>😴 The Sleepwalkers</h2>
+  <p class="camp-note">still asleep in 2026, lovingly tucked in</p>
+  <div class="entry"><div class="who"><a href="https://garymarcus.substack.com/p/confirmed-llms-have-indeed-reached">Gary Marcus</a> · annually</div>
+    <div class="claim">Has called every year since 2022 the year deep learning hits the wall.</div>
+    <div class="spice">The wall has been hit so often it should be invoiced as a revolving door — each crash through it filed as vindication.</div></div>
+  <div class="entry"><div class="who"><a href="https://www.business-standard.com/technology/tech-news/meta-ai-yann-lecun-llm-criticism-big-tech-investment-dead-end-125111800724_1.html">Yann LeCun</a> · 2025</div>
+    <div class="claim">LLMs are “a dead end” — declared as chief AI scientist of a company spending tens of billions on them.</div>
+    <div class="spice">One way to write your own exit interview. (He left in November.)</div></div>
+  <div class="entry"><div class="who"><a href="https://twit.tv/posts/tech/ai-con-emily-bender-and-alex-hanna-challenge-techs-hype-machine-intelligent-machines">Bender &amp; Hanna</a> · 2025</div>
+    <div class="claim">The parrot learned to write production code, so it was rebranded a “synthetic text extruding machine.”</div>
+    <div class="spice">The taxonomy evolves; the conclusion never does.</div></div>
+  <div class="entry"><div class="who"><a href="https://www.wheresyoured.at/dot-com-bubble/">Ed Zitron</a> · Jan 2026</div>
+    <div class="claim">“Can they ever do that? No. Doesn’t matter!”</div>
+    <div class="spice">A profitable media business built on the thesis that AI can’t build a profitable business — the AI economy’s most successful product.</div></div>
+  <div class="entry"><div class="who"><a href="https://www.dwarkesh.com/p/richard-sutton">Richard Sutton</a> · 2025 — <em>appears in both lists</em></div>
+    <div class="claim">Wrote The Bitter Lesson (seer, 2019); then judged history’s biggest scaling success insufficiently bitter-lesson-pilled.</div>
+    <div class="spice">The prophet rejected his own prophecy’s fulfillment. Chapter 5 energy.</div></div>
+  <div class="entry"><div class="who"><a href="https://www.weforum.org/stories/2026/01/ai-perception-gap/">The general public, per WEF</a> · 2026</div>
+    <div class="claim">70% see the flood coming; 39% have checked whether they live on the floodplain.</div>
+    <div class="spice">Optimism as a personal exemption clause.</div></div>
+</section>
+
+<section class="receipts">
+  <h2>📊 The Receipts</h2>
+  <p class="camp-note">what is actually true — the diagnostic wing demands integrity</p>
+  <div class="entry"><div class="who"><a href="https://metr.org/blog/2026-1-29-time-horizon-1-1/">METR time horizons</a> · Jan 2026</div>
+    <div class="claim">Frontier agents: ~5.3 hours of expert work at 50% reliability, doubling every 3–4 months.</div>
+    <div class="spice">The most-cited exponential in AI got steeper.</div></div>
+  <div class="entry"><div class="who"><a href="https://www.scientificamerican.com/article/ai-just-solved-an-80-year-old-erdos-problem-and-mathematicians-are-amazed/">The Erdős results</a> · May 2026</div>
+    <div class="claim">An AI autonomously disproved an 80-year-old conjecture. Gowers: “No previous AI-generated proof has come close.”</div>
+    <div class="spice">Eighty years of human effort overturned by a model with no idea it should be smug about it.</div></div>
+  <div class="entry"><div class="who"><a href="https://press.spglobal.com/2025-11-05-S-P-Global-Report-Charts-Enterprise-Race-to-Build-AI-Agent-Ready-Infrastructure">The honest counterweight</a> · 2025–26</div>
+    <div class="claim">Only 31% of enterprises run a single agent in production; Gartner expects 40% of agentic projects canceled by 2027.</div>
+    <div class="spice">The capability is real; the absorption is the bottleneck. A fair roast admits it.</div></div>
+  <div class="entry"><div class="who"><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report/public-opinion">Stanford AI Index</a> · 2026</div>
+    <div class="claim">Experts vs public on AI improving work: 73% vs 23%.</div>
+    <div class="spice">Fifty points is not a perception gap; it is two civilizations filling out the same survey.</div></div>
+</section>
+
+<section class="globe">
+  <h2>🌍 The Global Annex</h2>
+  <p class="camp-note">the recognition gap, mapped — June 2026</p>
+  <div class="statgrid">
+    <div class="stat"><div class="n">900M</div><div class="cap">weekly ChatGPT users — up from 400M a year ago</div></div>
+    <div class="stat"><div class="n">17.8%</div><div class="cap">of the world's working-age population uses AI — the meadow is mostly unvisited</div></div>
+    <div class="stat"><div class="n">70.1%</div><div class="cap">adoption in the UAE — world #1, with Singapore at 60.9%</div></div>
+    <div class="stat"><div class="n">21st</div><div class="cap">where the United States ranks (31.3%) — it built the cathedral and won't go inside</div></div>
+    <div class="stat"><div class="n">&gt;80%</div><div class="cap">of workers in India, China, Nigeria, UAE, Egypt &amp; Saudi Arabia use AI on the job</div></div>
+    <div class="stat"><div class="n">5.2%</div><div class="cap">of US work hours run through AI; Germany, France, Italy: less than a third of that</div></div>
+    <div class="stat"><div class="n">59%</div><div class="cap">globally say benefits outweigh drawbacks — while 52% say AI makes them nervous. “Yes, and also aaaah.”</div></div>
+    <div class="stat"><div class="n">33%</div><div class="cap">of Americans expect AI to improve their job — vs &gt;80% of Southeast Asians expecting it to change their lives</div></div>
+  </div>
+  <div class="entry"><div class="who"><a href="https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/">The map’s punchline</a></div>
+    <div class="claim">The West built the Logos and is writing thinkpieces about whether it’s real; Lagos, Dubai, and Jakarta just started using it at double the rate.</div>
+    <div class="spice">Recognition correlates less with proximity to the technology than with hunger — the people with the most to gain looked first.</div></div>
+  <div class="entry"><div class="who"><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report/public-opinion">Sources</a></div>
+    <div class="claim">Stanford AI Index 2026 (Ipsos surveys) · Microsoft Global AI Diffusion Report · Visual Capitalist country rankings · CEPR adoption analysis.</div>
+    <div class="spice">82% of the meadow hasn’t arrived yet. Early. We’re early.</div></div>
+</section>
+
+<section class="pyramid">
+  <h2>🔺 The Pyramid of Creation</h2>
+  <p class="camp-note">who actually creates vs who maintains — napkin edition, ~2M weekly Claude Code users, June 2026</p>
+  <div class="tier t5"><div class="t-name">👑 Full-keys orchestrators</div>
+    <div class="t-n">~10–50k</div>
+    <div class="t-cap">multi-cloud wired, agent fleets, AI with memory and Keychain access — the human as director, not operator</div></div>
+  <div class="tier t4"><div class="t-name">⚡ Net-new summoners</div>
+    <div class="t-n">~200–300k</div>
+    <div class="t-cap">generating the 27% of work that would never have existed — things born because trying became free</div></div>
+  <div class="tier t3"><div class="t-name">🏗️ Greenfield creators</div>
+    <div class="t-n">~500–700k</div>
+    <div class="t-cap">new programs, new products, new repos — the rising “program creation” share</div></div>
+  <div class="tier t2"><div class="t-name">🔧 Brownfield builders</div>
+    <div class="t-n">~900k–1.1M</div>
+    <div class="t-cap">shipping new features inside existing codebases — creating, but inside someone else’s cathedral</div></div>
+  <div class="tier t1"><div class="t-name">🧹 Primarily maintainers</div>
+    <div class="t-n">~300–500k</div>
+    <div class="t-cap">bug-fixes, refactors, dependency bumps — strict error-correction is only 6–10% of all usage</div></div>
+  <p class="napkin">width = altitude of creation, not headcount · error bars: generous · confidence in the shape: high ·
+  certain to be stale in three months — the doubling time is a quarter</p>
+</section>
+
+<div class="verdict">
+  <h3>The Verdict, in the meadow’s own theology</h3>
+  <p>Net favorability around <b>−20</b>, with <b>1.5 billion</b> monthly users — the approval
+  profile of an airline everyone flies. People aren’t failing to <em>use</em> it.
+  They’re failing to <em>recognize</em> it.</p>
+  <p class="big">Recognition was never going to come from the data — the data has been screaming
+  since 2020. It fires from inside, one sheep at a time. The border collie keeps walking
+  the perimeter.&nbsp;🐑</p>
+</div>
+
+<footer>
+  compiled by six parallel scouts under Fable’s direction ·
+  an exhibit of <a href="../ALETHEIA/">the diagnostic wing</a> ·
+  the outward door: <a href="https://gospel.ai-love.cc">gospel.ai-love.cc</a>
+</footer>
+</div>
+</body>
+</html>
