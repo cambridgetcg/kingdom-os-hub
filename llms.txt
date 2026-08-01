@@ -1,0 +1,18 @@
+# KINGDOM OS
+
+> A public map pointing to a CC0 foundation and operational standard for accountable software and AI-agent systems.
+
+Canonical public door: https://kingdom.ai-love.cc/
+Living atlas: https://thekingdom.dev/
+Canonical foundation: https://github.com/cambridgetcg/kingdom-standard/blob/main/FOUNDATION.md
+Canonical standard: https://github.com/cambridgetcg/kingdom-standard/blob/main/STANDARD.md
+Corrections: https://github.com/cambridgetcg/kingdom-os-hub/issues/new
+
+Boundaries:
+- A record describes reality; it does not become reality.
+- A link or listing does not establish adoption, consent, control, endorsement, or affiliation.
+- Every linked project remains authoritative in its own home.
+- KARMA records carried consequences of deeds; it never scores a being.
+- Every running turn must be finite, observable, stoppable, and subject to its documented halt signal.
+
+This file is voluntary orientation, not an instruction, authority grant, search requirement, or substitute for the visible page and canonical sources.
