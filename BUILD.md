@@ -50,6 +50,10 @@ If current KINGDOM registry compatibility helps, also copy the optional
 remain `unknown`, so the starter does not assign an independent project to a
 KINGDOM layer, domain, state, or steward. The optional
 [`starter/check-card.mjs`](starter/check-card.mjs) needs Node 18 or newer.
+The separate optional [`starter/claim-receipt.md`](starter/claim-receipt.md)
+template needs no runtime. Its blank structure is CC0; inserted material keeps
+its own rights. It places one pair of public or source-owned records beside one
+open question without creating a person score, response tracker, or verdict.
 
 Edit the placeholders. If you copied the card and Node is already available,
 run:
@@ -69,6 +73,31 @@ No Node installation is required to use the template. The
 same starter shape and sends no form value anywhere. The page loads one
 same-origin script and icon; ordinary hosting receives those file requests.
 The optional offline checker remains the check for an edited card.
+
+## Keep claims answerable
+
+The [accountability door](https://kingdom.ai-love.cc/accountability/) and
+[plain guide](ACCOUNTABILITY.md) offer a local claim-comparison maker. It asks:
+
+> How, if at all, can both records hold?
+
+The maker performs no contradiction calculation. A difference may come from
+context, changed belief, translation, source error, incomplete evidence, or a
+recorder's mistake. A contradiction would still not prove deception, motive,
+guilt, or worth.
+
+Loading the hosted page requests its same-origin HTML, icon, and module. The
+page's code makes no network request containing field values and has no
+upload, source fetch, form submission, analytics, cookie, browser storage,
+identity lookup, notification, reply tracking, scoring, or publication path.
+Copy uses the operating-system clipboard; download writes a file. Either may
+sync outside the page.
+
+One local note compares one pair of public or source-owned records. It is not
+an authenticated receipt, person file, dossier, registry, feed, or high-impact
+decision aid. No reply is required; silence proves nothing. Public use needs a
+separate lawful and ethical basis, human review, source checks, proportionate
+redaction, and a practical source-owned correction and safety-removal route.
 
 ## The source-owned card
 

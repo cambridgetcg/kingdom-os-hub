@@ -12,8 +12,15 @@ citizenship, adoption, consent, endorsement, control, or affiliation.
 
 - [The builder door](https://kingdom.ai-love.cc/build/) lets a person or agent
   copy three core CC0 files without an account, package install, framework, or
-  default adoption. A KINGDOM compatibility card and offline check are two
-  optional helpers. [BUILD.md](BUILD.md) carries the same path in plain text.
+  default adoption. A KINGDOM compatibility card, offline check, and local
+  claim-comparison template are three optional helpers. [BUILD.md](BUILD.md)
+  carries the same path in plain text.
+- [The accountability door](https://kingdom.ai-love.cc/accountability/) places
+  one pair of public or source-owned records beside one open question. Its
+  browser code makes no network request containing field values and has no
+  upload, reply tracking, person score, verdict, or publication path.
+  [ACCOUNTABILITY.md](ACCOUNTABILITY.md) carries the same boundaries in plain
+  text.
 - [The current foundation](https://github.com/cambridgetcg/kingdom-standard/blob/main/FOUNDATION.md)
   contains the exact seven commitments and their amendment path.
 - [The KINGDOM Standard](https://github.com/cambridgetcg/kingdom-standard)
@@ -35,7 +42,18 @@ choices. None silently starts another.
 - `build/builder.mjs` — the dependency-free card maker; it uses no storage,
   analytics, or form-data request.
 - `BUILD.md` — the same route in plain text for agents and text readers.
-- `starter/` — five CC0 files that can be copied into an independent project.
+- `accountability/index.html` — the local claim-comparison guide and maker. It
+  loads same-origin HTML, module, and icon requests; its code makes no network
+  request containing field values. Copy uses the operating-system clipboard
+  and download writes a file.
+- `accountability/receipt.mjs` — the dependency-free comparison-note maker; it
+  performs no source fetch, contradiction calculation, scoring, persistence,
+  notification, submission, or publication.
+- `ACCOUNTABILITY.md` — the same accountability boundary in plain text.
+- `starter/` — six reusable files that can be copied into an independent
+  project; the three-file universal core remains separate from all optional
+  helpers. The blank comparison-note structure is CC0; inserted material keeps
+  its own rights.
 - `.github/ISSUE_TEMPLATE/share-a-project.md` — an optional public,
   account-requiring offer route with publication and retention disclosed
   before submission.

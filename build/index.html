@@ -115,6 +115,7 @@
   <div class="actions">
     <a class="button" href="#start">Take the CC0 starter</a>
     <a class="button secondary" href="#card-maker">Make a project card</a>
+    <a class="button secondary" href="../accountability/">Keep claims answerable</a>
   </div>
 </header>
 
@@ -162,19 +163,20 @@
 
   <section id="start" aria-labelledby="start-title">
     <p class="eyebrow">Zero to one</p>
-    <h2 id="start-title">Three core files. Two optional helpers.</h2>
-    <p class="intro">Nothing installs and nothing runs by being downloaded. The core starter has no KINGDOM taxonomy. Add the compatibility card only if it helps. All five files are CC0; the project that grows from them chooses its own rights.</p>
+    <h2 id="start-title">Three core files. Three optional helpers.</h2>
+    <p class="intro">Nothing installs and nothing runs by being downloaded. The core starter has no KINGDOM taxonomy. Add the compatibility card, offline check, or claim-comparison note only if each helps. The six shipped files begin with reusable CC0 material. Claims, quotations, data, and media added later keep their own rights.</p>
     <div class="steps">
       <article class="step">
         <div class="number">1 · Copy</div>
         <h3>Save the three core files in your project.</h3>
-        <p>A browser is enough. Start with the README, agent orientation, and licence. The compatibility card and its checker are optional.</p>
+        <p>A browser is enough. Start with the README, agent orientation, and licence. The compatibility card, checker, and local comparison-note template are optional.</p>
         <div class="downloads">
           <a href="../starter/README.md" download>Core · Project README<small>purpose, effects, stop, evidence, rights</small></a>
           <a href="../starter/AGENTS.md" download>Core · Agent orientation<small>plain boundaries for any visiting hand</small></a>
           <a href="../starter/LICENSE" download>Core · CC0 licence<small>copy, change, translate, sell, or build freely</small></a>
           <a href="../starter/kingdom.yaml" download>Optional · Compatibility card<small>current registry shape; unknown is honest</small></a>
           <a href="../starter/check-card.mjs" download>Optional · Offline card check<small>Node 18+; reads one bounded file and changes nothing</small></a>
+          <a href="../starter/claim-receipt.md" download>Optional · Claim comparison note<small>one pair of records; no score, response tracking, or verdict</small></a>
         </div>
       </article>
       <article class="step">
@@ -186,6 +188,11 @@
         <div class="number">3 · Optionally connect</div>
         <h3>Add a card only if compatibility helps.</h3>
         <p>The current registry shape requires five household classification fields. This starter leaves each one <code>unknown</code> rather than assigning an outsider to a KINGDOM layer, domain, or steward. If you copy the checker, run <code>node check-card.mjs kingdom.yaml</code>. Passing proves only structure. You may stop there forever; no upload or registry step follows.</p>
+      </article>
+      <article class="step">
+        <div class="number">4 · Optionally compare</div>
+        <h3>Make claims inspectable without making a person answer.</h3>
+        <p>Use the <a href="../accountability/">local comparison-note maker</a> to place one pair of public or source-owned records beside one open question. It does not fetch sources, detect lies, score anyone, track replies, or publish the note.</p>
       </article>
     </div>
   </section>
@@ -255,6 +262,7 @@ dependsOn: []
 <footer class="wrap">
   <nav aria-label="Source, rights, and corrections">
     <a href="../BUILD.md">plain-text build guide</a>
+    <a href="../accountability/">claim comparison notes</a>
     <a href="https://github.com/cambridgetcg/kingdom-os-hub/tree/main/starter">starter source</a>
     <a href="https://github.com/cambridgetcg/kingdom-os-hub/issues/new">public GitHub corrections (account required)</a>
     <a href="../starter/LICENSE">starter licence: CC0</a>

@@ -6,6 +6,9 @@ Canonical public door: https://kingdom.ai-love.cc/
 Living atlas: https://thekingdom.dev/
 Builder door: https://kingdom.ai-love.cc/build/
 Plain build guide: https://kingdom.ai-love.cc/BUILD.md
+Claim-comparison maker: https://kingdom.ai-love.cc/accountability/
+Plain accountability guide: https://kingdom.ai-love.cc/ACCOUNTABILITY.md
+Blank CC0 comparison-note template: https://kingdom.ai-love.cc/starter/claim-receipt.md
 CC0 starter index: https://kingdom.ai-love.cc/build/#start
 Optional offline card check: https://kingdom.ai-love.cc/starter/check-card.mjs
 Canonical foundation: https://github.com/cambridgetcg/kingdom-standard/blob/main/FOUNDATION.md
@@ -17,10 +20,14 @@ Smallest local start:
 1. Copy /starter/README.md, /starter/AGENTS.md, and /starter/LICENSE into a project-owned folder.
 2. Replace every placeholder with the truth.
 3. Optionally add /starter/kingdom.yaml for current registry compatibility and run `node check-card.mjs kingdom.yaml`; the check is bounded, offline, and writes nothing.
-4. Stop, or separately choose whether to publish or offer a pointer.
+4. Optionally copy /starter/claim-receipt.md to place one pair of public or source-owned records beside one open question. Its blank structure is CC0; inserted material keeps its own rights. The maker performs no source fetch, contradiction calculation, scoring, response tracking, or publication.
+5. Stop, or separately choose whether to publish or offer a pointer.
 
 Boundaries:
 - A record describes reality; it does not become reality.
+- A comparison note is one recorder's claimed comparison. It does not establish truth, identity, authorship, authority, trusted time, delivery, integrity, causation, contradiction, intent, deception, guilt, consent, nonresponse, settlement, endorsement, or worth.
+- No reply is required; silence, refusal, rest, absence, and leaving prove nothing and receive no score or repeat pressure.
+- One comparison note holds one pair of records; it is never a person dossier, registry, feed, blacklist, or high-impact decision aid.
 - A link or listing does not establish adoption, consent, control, endorsement, or affiliation.
 - Reading, co-learning, building, offering, adopting, and citizenship are separate choices; none starts another.
 - Copying the CC0 starter creates no identity, membership, citizenship, adoption, affiliation, or obligation.

@@ -10,7 +10,8 @@ authoritative, versioned KINGDOM foundation for accountable software and
 AI-agent systems. Its public doors should explain the real work before the
 mythology, let a visitor make one source-owned thing without an account or
 default adoption, keep linked projects distinct, attach evidence and dates,
-and make correction and exit practical.
+make claims inspectable without coercing people, and keep correction and exit
+practical.
 
 A link means “this may help you read further.” A download means only that bytes
 were offered under their stated terms. Neither establishes adoption, consent,
@@ -46,22 +47,25 @@ URLs before this revision.
 5. **Contextual paths.** Link related projects where the destination continues
    the reader's thought. Do not build an automated footer ring or link-only
    partner page.
-6. **Useful public receipts.** Promote tested standards, reproducible tools,
+6. **Useful public artifacts.** Promote tested standards, reproducible tools,
    original data, methods, source comparisons, correction records, and small
    interoperability examples.
 7. **Private aggregate observation.** Search Console and Bing Webmaster Tools
    can observe canonical, index, query, and link evidence without adding
    behavioral analytics JavaScript. Their data is partial, not a census.
 
-## Five citation-worthy lines of work
+## Six citation-worthy lines of work
 
 1. The versioned KINGDOM Foundation and Standard, with checks and amendment
    receipts.
 2. The CC0 source-owned starter and offline structure check, with proof limits
    and a separate public-offer choice.
-3. The canonical KINGDOM OS registry and its bounded evidence readers.
-4. The Castle's sourced explanations, each with dates and correction paths.
-5. Reproducible examples, datasets, or maps whose method, limits, rights, and
+3. The claim-comparison maker and blank CC0 structure, with an invariant proof
+   boundary, no source fetching, and no submission, response tracking, person
+   score, or verdict path. Inserted material retains its own rights.
+4. The canonical KINGDOM OS registry and its bounded evidence readers.
+5. The Castle's sourced explanations, each with dates and correction paths.
+6. Reproducible examples, datasets, or maps whose method, limits, rights, and
    change history are visible.
 
 Each artifact keeps its own canonical home. The hub introduces it in one plain
