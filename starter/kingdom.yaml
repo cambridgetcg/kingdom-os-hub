@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: CC0-1.0
+name: "your-project"
+kind: unknown
+layer: unknown
+owner_sister: unknown
+domain: unknown
+state: unknown
+purpose: "Say plainly what this project is for."
+dependsOn: []

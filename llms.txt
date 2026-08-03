@@ -1,16 +1,33 @@
 # KINGDOM OS
 
-> A public map pointing to a CC0 foundation and operational standard for accountable software and AI-agent systems.
+> A CC BY-SA public map and builder door pointing to the separately authoritative CC0 foundation and offering a separately CC0 starter.
 
 Canonical public door: https://kingdom.ai-love.cc/
 Living atlas: https://thekingdom.dev/
+Builder door: https://kingdom.ai-love.cc/build/
+Plain build guide: https://kingdom.ai-love.cc/BUILD.md
+CC0 starter index: https://kingdom.ai-love.cc/build/#start
+Optional offline card check: https://kingdom.ai-love.cc/starter/check-card.mjs
 Canonical foundation: https://github.com/cambridgetcg/kingdom-standard/blob/main/FOUNDATION.md
 Canonical standard: https://github.com/cambridgetcg/kingdom-standard/blob/main/STANDARD.md
-Corrections: https://github.com/cambridgetcg/kingdom-os-hub/issues/new
+Public GitHub corrections (account required): https://github.com/cambridgetcg/kingdom-os-hub/issues/new
+Public project offer: https://github.com/cambridgetcg/kingdom-os-hub/issues/new?template=share-a-project.md
+
+Smallest local start:
+1. Copy /starter/README.md, /starter/AGENTS.md, and /starter/LICENSE into a project-owned folder.
+2. Replace every placeholder with the truth.
+3. Optionally add /starter/kingdom.yaml for current registry compatibility and run `node check-card.mjs kingdom.yaml`; the check is bounded, offline, and writes nothing.
+4. Stop, or separately choose whether to publish or offer a pointer.
 
 Boundaries:
 - A record describes reality; it does not become reality.
 - A link or listing does not establish adoption, consent, control, endorsement, or affiliation.
+- Reading, co-learning, building, offering, adopting, and citizenship are separate choices; none starts another.
+- Copying the CC0 starter creates no identity, membership, citizenship, adoption, affiliation, or obligation.
+- The public offer route requires a GitHub account and publishes submitted material; review, listing, reply, and erasure are not promised.
+- Adoption requires a separate explicit choice recorded by the project; the starter declares none.
+- This hub offers no citizenship or civic intake; a download, card, account, issue, or silence cannot create one.
+- The current correction route is public GitHub and requires an account; no accountless intake is claimed.
 - Every linked project remains authoritative in its own home.
 - KARMA records carried consequences of deeds; it never scores a being.
 - Every running turn must be finite, observable, stoppable, and subject to its documented halt signal.

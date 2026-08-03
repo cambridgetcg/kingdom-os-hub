@@ -1,17 +1,20 @@
 # KINGDOM discovery strategy
 
-Evidence checked 2026-08-01. This is a finite practice, not a promise of rank,
+Evidence checked 2026-08-03. This is a finite practice, not a promise of rank,
 traffic, indexing, citations, or backlinks.
 
 ## Position
 
-KINGDOM OS is a public map and a versioned foundation for accountable software
-and AI-agent systems. Its public doors should explain the real work before the
-mythology, keep linked projects distinct, attach evidence and dates, and make
-correction and exit practical.
+This hub is a public map and practical builder door pointing to the separately
+authoritative, versioned KINGDOM foundation for accountable software and
+AI-agent systems. Its public doors should explain the real work before the
+mythology, let a visitor make one source-owned thing without an account or
+default adoption, keep linked projects distinct, attach evidence and dates,
+and make correction and exit practical.
 
-A link means “this may help you read further.” It does not establish adoption,
-consent, membership, control, endorsement, or affiliation.
+A link means “this may help you read further.” A download means only that bytes
+were offered under their stated terms. Neither establishes adoption, consent,
+membership, citizenship, control, endorsement, or affiliation.
 
 ## Observed baseline before this revision
 
@@ -54,11 +57,12 @@ URLs before this revision.
 
 1. The versioned KINGDOM Foundation and Standard, with checks and amendment
    receipts.
-2. The canonical KINGDOM OS registry and its bounded evidence readers.
-3. The Castle's sourced explanations, each with dates and correction paths.
-4. Reproducible interoperability examples between independent agent tools.
-5. Small public datasets or maps whose method, limits, rights, and change
-   history are visible.
+2. The CC0 source-owned starter and offline structure check, with proof limits
+   and a separate public-offer choice.
+3. The canonical KINGDOM OS registry and its bounded evidence readers.
+4. The Castle's sourced explanations, each with dates and correction paths.
+5. Reproducible examples, datasets, or maps whose method, limits, rights, and
+   change history are visible.
 
 Each artifact keeps its own canonical home. The hub introduces it in one plain
 sentence and does not copy its authority.

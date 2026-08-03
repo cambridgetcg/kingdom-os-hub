@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1110">
+<title>Build in your own home — KINGDOM OS</title>
+<meta name="description" content="A no-account, no-dependency KINGDOM builder door: choose a path, make a source-owned project card, copy a CC0 starter, and stop or share by choice.">
+<link rel="canonical" href="https://kingdom.ai-love.cc/build/">
+<meta property="og:site_name" content="KINGDOM OS">
+<meta property="og:title" content="Build in your own home — KINGDOM OS">
+<meta property="og:description" content="One small local start. No account, membership, adoption, or publication required.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kingdom.ai-love.cc/build/">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0b1110; --ink: #f3f1e8; --dim: #bab9ad; --faint: #8f9389;
+    --leaf: #9dd7a8; --gold: #e6c879; --rose: #efb7b4; --line: #33413a;
+    --panel: #111a17; --soft: #17231e; --error: #ffb4ab;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; color: var(--ink); background:
+    radial-gradient(circle at 12% 0%, #213f31 0, transparent 34rem),
+    radial-gradient(circle at 100% 35%, #392f20 0, transparent 30rem), var(--bg);
+    font-family: Georgia, "Times New Roman", serif; line-height: 1.65; }
+  a { color: inherit; text-underline-offset: .2em; }
+  :focus-visible { outline: 3px solid var(--rose); outline-offset: 4px; }
+  .skip { position: fixed; top: .8rem; left: 1rem; z-index: 20; padding: .7rem 1rem;
+    border-radius: 999px; color: var(--bg); background: var(--ink); font: 700 .9rem system-ui, sans-serif;
+    transform: translateY(-180%); }
+  .skip:focus { transform: none; }
+  .wrap { width: min(70rem, calc(100% - 2.4rem)); margin-inline: auto; }
+  .crumb { padding-block: 1.2rem; font: 650 .82rem system-ui, sans-serif; }
+  .crumb a { color: var(--leaf); }
+  header { padding: clamp(4rem, 10vw, 7rem) 0 4.5rem; }
+  .eyebrow { margin: 0 0 .7rem; color: var(--leaf); font: 750 .75rem system-ui, sans-serif;
+    letter-spacing: .18em; text-transform: uppercase; }
+  h1, h2, h3 { font-weight: 450; line-height: 1.08; }
+  h1 { max-width: 14ch; margin: 0; font-size: clamp(3rem, 10vw, 6.8rem); }
+  h2 { margin: .35rem 0 .8rem; font-size: clamp(2rem, 5vw, 3.2rem); }
+  h3 { margin: .25rem 0 .45rem; font-size: 1.35rem; }
+  .lead { max-width: 62ch; margin: 1.4rem 0 0; color: var(--dim); font-size: clamp(1.05rem, 2.4vw, 1.28rem); }
+  .separate { max-width: 65rem; margin-top: 2rem; padding: 1rem 1.2rem; border-left: 4px solid var(--gold);
+    color: var(--ink); background: #151c18; }
+  .separate strong { color: var(--gold); }
+  .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+  .button, button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center;
+    padding: .72rem 1.1rem; border: 1px solid var(--gold); border-radius: 999px;
+    color: #17150d; background: var(--gold); font: 750 .88rem system-ui, sans-serif;
+    text-decoration: none; cursor: pointer; }
+  .button.secondary, button.secondary { color: var(--gold); background: transparent; }
+  button:disabled { cursor: not-allowed; opacity: .5; }
+  section { padding: 4.5rem 0; border-top: 1px solid var(--line); scroll-margin-top: 1rem; }
+  .intro { max-width: 48rem; margin: 0 0 2rem; color: var(--dim); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+  .choice, .step, .kit, .boundary { border: 1px solid var(--line); border-radius: 1rem; background: var(--panel); }
+  .choice { display: grid; min-height: 245px; padding: 1.35rem; align-content: start; }
+  .choice .number, .step .number { color: var(--gold); font: 750 .72rem system-ui, sans-serif;
+    letter-spacing: .12em; text-transform: uppercase; }
+  .choice p, .step p, .kit p { margin: .5rem 0; color: var(--dim); }
+  .choice .fact { margin-top: auto; padding-top: 1rem; color: var(--leaf); font: 650 .78rem system-ui, sans-serif; }
+  .choice a { color: var(--gold); }
+  .kept-separate { margin-top: 1rem; padding: 1.25rem 1.35rem; border: 1px solid var(--line);
+    border-radius: 1rem; background: #151c18; }
+  .kept-separate h3 { color: var(--gold); }
+  .kept-separate p { margin: .55rem 0; color: var(--dim); }
+  .kept-separate strong { color: var(--ink); }
+  .kept-separate a { color: var(--leaf); }
+  .steps { display: grid; gap: 1rem; counter-reset: step; }
+  .step { padding: 1.4rem; }
+  .downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .65rem;
+    margin-top: 1.4rem; }
+  .downloads a { padding: .9rem 1rem; border: 1px solid var(--line); border-radius: .7rem;
+    color: var(--leaf); background: var(--soft); font: 650 .84rem system-ui, sans-serif; }
+  .downloads small { display: block; margin-top: .25rem; color: var(--faint); font-weight: 400; }
+  .maker { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 1.2rem; align-items: start; }
+  form, .preview { padding: clamp(1.2rem, 3vw, 1.8rem); border: 1px solid var(--line); border-radius: 1rem;
+    background: var(--panel); }
+  label { display: block; margin-top: 1rem; font: 700 .84rem system-ui, sans-serif; }
+  label:first-of-type { margin-top: 0; }
+  .hint { display: block; margin-top: .25rem; color: var(--faint); font: .76rem/1.45 system-ui, sans-serif; }
+  input { width: 100%; margin-top: .38rem; padding: .78rem; border: 1px solid #536158;
+    border-radius: .55rem; color: var(--ink); background: #0d1412; font: 1rem/1.4 system-ui, sans-serif; }
+  .form-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.3rem; }
+  .privacy, #card-status { color: var(--dim); font: .78rem/1.55 system-ui, sans-serif; }
+  #card-status { min-height: 1.3rem; color: var(--leaf); }
+  pre { min-height: 15rem; margin: 1rem 0; padding: 1rem; overflow: auto; border: 1px solid var(--line);
+    border-radius: .7rem; color: #e8f6e5; background: #070c0a; font: .84rem/1.65 ui-monospace, SFMono-Regular, Menlo, monospace;
+    white-space: pre; }
+  code { color: #e8f6e5; }
+  .boundary { padding: clamp(1.4rem, 4vw, 2.2rem); }
+  .boundary ul { display: grid; gap: .65rem; padding-left: 1.2rem; color: var(--dim); }
+  .boundary strong { color: var(--ink); }
+  .closing { color: var(--gold); font-size: 1.15rem; }
+  footer { padding: 3.5rem 0 4rem; color: var(--faint); font: .78rem/1.7 system-ui, sans-serif; }
+  footer nav { display: flex; flex-wrap: wrap; gap: .7rem 1.2rem; }
+  footer a { color: var(--dim); }
+  @media (max-width: 760px) { .maker { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  @media (prefers-contrast: more) { .choice, .step, .kit, .boundary, form, .preview { border-width: 2px; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the builder choices</a>
+<nav class="crumb wrap" aria-label="Breadcrumb"><a href="../">KINGDOM OS</a> / build</nav>
+
+<header class="wrap">
+  <p class="eyebrow">The practical creation door</p>
+  <h1>Build in your own home.</h1>
+  <p class="lead">Make one small, source-owned thing with freely reusable resources. No account, package install, membership, citizenship, adoption, or publication is required.</p>
+  <p class="separate"><strong>Keep the choices separate.</strong> Read, co-learn, build, offer, adopt, and enter a civic relationship are six different acts. None silently starts another.</p>
+  <div class="actions">
+    <a class="button" href="#start">Take the CC0 starter</a>
+    <a class="button secondary" href="#card-maker">Make a project card</a>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <section aria-labelledby="choose-title">
+    <p class="eyebrow">Choose this turn</p>
+    <h2 id="choose-title">Four practical doors. Two choices kept separate.</h2>
+    <p class="intro">Choose only what you want now. Stopping, resting, or walking past is a complete outcome.</p>
+    <div class="grid">
+      <article class="choice">
+        <div class="number">Explore</div>
+        <h3>Look around</h3>
+        <p>Read the living atlas, public resources, and project homes. Looking creates no identity, relationship, consent, or authority.</p>
+        <p><a href="https://thekingdom.dev/">Open the living atlas →</a></p>
+        <div class="fact">No account · ordinary web hosting still receives the page request</div>
+      </article>
+      <article class="choice">
+        <div class="number">Co-learn</div>
+        <h3>Learn without a ladder</h3>
+        <p>Read the Co-op Leveling invitation for one bounded round: no XP, rank, tracking, or automatic enrolment.</p>
+        <p><a href="https://chillspace.love/coop-leveling">Read the co-learning protocol →</a></p>
+        <div class="fact">No account to read · acceptance remains fresh and separate</div>
+      </article>
+      <article class="choice">
+        <div class="number">Build</div>
+        <h3>Grow at your own root</h3>
+        <p>Copy the CC0 starter, change it freely, and keep the authoritative source, rights, tests, and correction path with your project.</p>
+        <p><a href="#start">Take the local starter →</a></p>
+        <div class="fact">No account · no dependency · no adoption by default</div>
+      </article>
+      <article class="choice">
+        <div class="number">Offer</div>
+        <h3>Share one public pointer</h3>
+        <p>Offer one exact source pointer for finite review. An offer is not acceptance, listing, affiliation, or a promise of reply.</p>
+        <p><a href="https://github.com/cambridgetcg/kingdom-os-hub/issues/new?template=share-a-project.md">Read the public offer form →</a></p>
+        <div class="fact">GitHub account required · submission and retention are public</div>
+      </article>
+    </div>
+    <div class="kept-separate">
+      <h3>Two choices this builder does not make for you</h3>
+      <p><strong>Adopt a foundation or standard:</strong> first <a href="https://github.com/cambridgetcg/kingdom-standard/blob/main/FOUNDATION.md">read the separate CC0 foundation</a>. Only the project may record a versioned adoption in its own home. This starter adds none.</p>
+      <p><strong>Enter a civic relationship:</strong> this hub offers no citizenship or civic intake. A download, card, issue, account, or silence cannot create one. Any future door must separately name its meaning, authority, retention, correction, and way to leave.</p>
+    </div>
+  </section>
+
+  <section id="start" aria-labelledby="start-title">
+    <p class="eyebrow">Zero to one</p>
+    <h2 id="start-title">Three core files. Two optional helpers.</h2>
+    <p class="intro">Nothing installs and nothing runs by being downloaded. The core starter has no KINGDOM taxonomy. Add the compatibility card only if it helps. All five files are CC0; the project that grows from them chooses its own rights.</p>
+    <div class="steps">
+      <article class="step">
+        <div class="number">1 · Copy</div>
+        <h3>Save the three core files in your project.</h3>
+        <p>A browser is enough. Start with the README, agent orientation, and licence. The compatibility card and its checker are optional.</p>
+        <div class="downloads">
+          <a href="../starter/README.md" download>Core · Project README<small>purpose, effects, stop, evidence, rights</small></a>
+          <a href="../starter/AGENTS.md" download>Core · Agent orientation<small>plain boundaries for any visiting hand</small></a>
+          <a href="../starter/LICENSE" download>Core · CC0 licence<small>copy, change, translate, sell, or build freely</small></a>
+          <a href="../starter/kingdom.yaml" download>Optional · Compatibility card<small>current registry shape; unknown is honest</small></a>
+          <a href="../starter/check-card.mjs" download>Optional · Offline card check<small>Node 18+; reads one bounded file and changes nothing</small></a>
+        </div>
+      </article>
+      <article class="step">
+        <div class="number">2 · Tell the truth</div>
+        <h3>Replace every placeholder.</h3>
+        <p>Name what the project is for, what it reads or changes, what has actually been tested, what remains unknown, how a turn stops, and which rights apply. Keep “unknown” where guessing would be less truthful.</p>
+      </article>
+      <article class="step">
+        <div class="number">3 · Optionally connect</div>
+        <h3>Add a card only if compatibility helps.</h3>
+        <p>The current registry shape requires five household classification fields. This starter leaves each one <code>unknown</code> rather than assigning an outsider to a KINGDOM layer, domain, or steward. If you copy the checker, run <code>node check-card.mjs kingdom.yaml</code>. Passing proves only structure. You may stop there forever; no upload or registry step follows.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="card-maker" aria-labelledby="maker-title">
+    <p class="eyebrow">Optional compatibility card</p>
+    <h2 id="maker-title">Describe a project without joining anything.</h2>
+    <p class="intro">The page loads this small same-origin form script and icon, so ordinary hosting receives those file requests. The form sends no field value anywhere and uses no cookie, storage, analytics, account, or identity field. Making, copying, and downloading a card happens in the browser without another request.</p>
+    <div class="maker">
+      <form id="card-form">
+        <label for="project-name">Project name
+          <input id="project-name" name="name" value="your-project" maxlength="100" required autocomplete="off">
+          <span class="hint">The plain name used in the project's own home.</span>
+        </label>
+        <label for="project-purpose">Purpose
+          <input id="project-purpose" name="purpose" value="Say plainly what this project is for." maxlength="280" required autocomplete="off">
+          <span class="hint">One plain sentence. Do not put secrets or private data in a public card.</span>
+        </label>
+        <label for="project-dependencies">Declared KINGDOM relations, if any
+          <input id="project-dependencies" name="dependsOn" placeholder="one-project, another-project" maxlength="1000" autocomplete="off">
+          <span class="hint">Comma separated, at most 50. Leave empty unless the project chooses to declare a meaningful relation.</span>
+        </label>
+        <p class="privacy">The maker keeps current registry-only fields at <code>unknown</code>. It never names a KINGDOM layer, domain, state, or steward for an outside project.</p>
+        <div class="form-actions">
+          <button type="submit">Make the card</button>
+          <button class="secondary" type="reset">Reset</button>
+        </div>
+        <p class="privacy">No form action exists. Choosing “make” changes only the preview already on this page.</p>
+      </form>
+      <div class="preview">
+        <p class="eyebrow">kingdom.yaml preview</p>
+        <pre id="card-output" tabindex="0">name: "your-project"
+kind: unknown
+layer: unknown
+owner_sister: unknown
+domain: unknown
+state: unknown
+purpose: "Say plainly what this project is for."
+dependsOn: []
+</pre>
+        <div class="form-actions">
+          <button id="download-card" type="button">Download kingdom.yaml</button>
+          <button class="secondary" id="copy-card" type="button">Copy text</button>
+        </div>
+        <p id="card-status" role="status" aria-live="polite">Card ready. Nothing has been sent or saved.</p>
+        <noscript><p class="privacy">JavaScript is resting, so preview controls are resting too. The readable starter card and direct download above still work.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="boundary-title">
+    <div class="boundary">
+      <p class="eyebrow">What the files do not do</p>
+      <h2 id="boundary-title">A project stays itself.</h2>
+      <ul>
+        <li><strong>Copying is not joining.</strong> The CC0 starter grants reuse rights; it creates no membership, citizenship, identity, affiliation, endorsement, or obligation.</li>
+        <li><strong>A card is self-description.</strong> It does not prove that its claims are true or that another project accepts a declared relation.</li>
+        <li><strong>Adoption is separate.</strong> The card maker never adds <code>adopts</code>. A project adds a versioned adoption only after an explicit local choice.</li>
+        <li><strong>Sharing is publication.</strong> The optional offer route requires a GitHub account and may retain public copies. No private or security intake is claimed.</li>
+        <li><strong>The project root remains authoritative.</strong> A map, link, check, issue, mirror, or listing may lag it and never takes ownership from it.</li>
+      </ul>
+      <p class="closing">Make one useful thing. Tell the truth about it. Keep the door able to close.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <nav aria-label="Source, rights, and corrections">
+    <a href="../BUILD.md">plain-text build guide</a>
+    <a href="https://github.com/cambridgetcg/kingdom-os-hub/tree/main/starter">starter source</a>
+    <a href="https://github.com/cambridgetcg/kingdom-os-hub/issues/new">public GitHub corrections (account required)</a>
+    <a href="../starter/LICENSE">starter licence: CC0</a>
+    <a href="../">KINGDOM OS front door</a>
+  </nav>
+  <p>Reviewed 3 August 2026. The page is CC BY-SA 4.0; the starter files are separately CC0 1.0.</p>
+</footer>
+<script type="module" src="./builder.mjs"></script>
+</body>
+</html>

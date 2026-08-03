@@ -12,7 +12,8 @@
   main { width: min(34rem, calc(100% - 3rem)); text-align: center; }
   h1 { font-size: clamp(2.4rem, 8vw, 4.5rem); font-weight: 400; }
   p { color: #aaa7bb; font-size: 1.08rem; line-height: 1.65; }
-  a { display: inline-block; margin-top: 1rem; color: #e8c87a; text-underline-offset: .2em; }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem 1.2rem; margin-top: 1rem; }
+  a { color: #e8c87a; text-underline-offset: .2em; }
   :focus-visible { outline: 3px solid #e8b4b8; outline-offset: 4px; }
 </style>
 </head>
@@ -21,7 +22,7 @@
   <p aria-hidden="true">✦</p>
   <h1>That door is not here.</h1>
   <p>No record is a negative verdict, and no missing route is a command. The public front door remains open.</p>
-  <a href="/">Return to KINGDOM OS</a>
+  <nav aria-label="Available doors"><a href="/">Return to KINGDOM OS</a><a href="/build/">Open the builder door</a></nav>
 </main>
 </body>
 </html>
