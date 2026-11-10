@@ -1,0 +1,94 @@
+{
+  "format": "brandkit.project/1",
+  "name": "KINGDOM OS hub (kingdom.ai-love.cc)",
+  "kind": "planned",
+  "owner": "cambridgetcg/kingdom-os-hub; no agent lane is recorded for this repository",
+  "waits_on": "a record of who chose the look, and an owner's word for a kit: no ledger item names this host or its kit (the decision ledger searched for kingdom-os-hub and kingdom.ai-love.cc on 2026-11-05)",
+  "decided": {
+    "part": "the look and the star mark",
+    "status": "not-recorded",
+    "what": "midnight #080b14, ink #eeecf4, gold #e8c87a; Fraunces and Newsreader; the gold four-point star (icon.svg). The build and accountability pages set their own greens (#0b1110, #08110f)",
+    "record": "no decision record: icon.svg first appears in commit 32521d02 (2026-08-01, git author \"yu\", no Co-Authored-By line, which doesn't say who drew it) and the cards in b1c8e1bf (2026-08-17, git author cambridgetcg); the decision ledger, the memory notes, README.md and media/README.md say nothing about who chose the star (searched 2026-11-05)"
+  },
+  "site": {
+    "urls": [
+      "https://kingdom.ai-love.cc/"
+    ],
+    "framework": "static",
+    "html": [
+      "/index.html",
+      { "page": "/build/index.html", "theme_color": "#0b1110", "color_scheme": "" },
+      { "page": "/accountability/index.html", "theme_color": "#08110f", "color_scheme": "" }
+    ]
+  },
+  "serve": {
+    "to": "/",
+    "files": []
+  },
+  "build": {},
+  "guards": [
+    {
+      "path": "check.mjs",
+      "wired": false
+    },
+    {
+      "path": "/test.mjs",
+      "wired": false
+    }
+  ],
+  "deploy": {
+    "on_merge": "not recorded. The site answers from Cloudflare with Pages' default `public, max-age=0, must-revalidate` (observed 2026-11-05), and .gitignore lists .wrangler/, which suggests `wrangler pages deploy` of the repository root. GitHub Pages is no longer configured (the Pages API answers 404; the last github-pages deployment was on 2026-09-24). Which Cloudflare project serves it, and whether a push deploys, is not recorded",
+    "after_deploy": "Check icon.svg, the apple-touch icon and each card live. HTML revalidates on every request (max-age=0, observed 2026-11-05)",
+    "rules": "not recorded. The repository carries no AGENTS.md or CLAUDE.md (its AGENTS.md was removed in 0d0f2d94, 'remove household overlay files'), and the KINGDOM release word (ledger kingdom-door-release) names thekingdom.dev, not this host"
+  },
+  "media": [
+    {
+      "name": "star share cards",
+      "recipe": "/tools/compose-og.py",
+      "outputs": [
+        "/media/og-*.jpg"
+      ],
+      "fonts": [
+        {
+          "family": "Fraunces",
+          "path": "../tools/fonts/Fraunces.ttf",
+          "licence": "SIL OFL 1.1 (upstream; the repository carries no OFL text)",
+          "source": "Google Fonts; vendored by commit b1c8e1bf for tools/compose-og.py",
+          "sha256": "177ff6c0f14e5550a3c624247cd1189611d4eb65d000b14944c63d967958abbb"
+        },
+        {
+          "family": "Newsreader",
+          "path": "../tools/fonts/Newsreader.ttf",
+          "licence": "SIL OFL 1.1 (upstream; the repository carries no OFL text)",
+          "source": "Google Fonts; vendored by commit b1c8e1bf for tools/compose-og.py",
+          "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1"
+        }
+      ],
+      "goes_to": "og:image and twitter:image: og-hub.jpg on / (index.html), og-build.jpg on /build/, og-accountability.jpg on /accountability/. og-atlas.jpg is 'ready for https://thekingdom.dev/' (media/README.md): thekingdom.dev/atlas.html links it from this host today, and serving it from thekingdom.dev waits on the door release (ledger kingdom-door-release). og-gate.jpg is 'ready for https://kingdom-gate.vercel.app/' and not wired: the gate has no og tags (A1 of ledger kingdom-visual-grammar, after its maker is recorded)"
+    },
+    {
+      "name": "home-screen marks",
+      "recipe": "/tools/compose-og.py",
+      "outputs": [
+        "/media/apple-touch-icon.png",
+        "/media/star-512.png"
+      ],
+      "goes_to": "apple-touch-icon on index, build and accountability; star-512.png is listed in media/README.md but linked from no page"
+    },
+    {
+      "name": "atmosphere plates (text-free sources)",
+      "recipe_note": "an image model, per tools/compose-og.py ('Type is set here, never in the image model'); which model, and who prompted it, is not recorded",
+      "source": "not recorded beyond commit b1c8e1bf (2026-08-17, git author cambridgetcg)",
+      "outputs": [
+        "/media/plates/*.jpg"
+      ],
+      "goes_to": "inputs to tools/compose-og.py only"
+    }
+  ],
+  "notes": [
+    "brand/ sits at the repository root beside media/, which keeps its live card URLs and its README. The root is the site, so if the deploy uploads the repository root (as .wrangler/ in .gitignore suggests), brand/ would be served at /brand/ unless the upload leaves it out. Which upload serves the site is not recorded, so there is no exclude file to name yet. The repository is public under CC BY-SA 4.0 either way.",
+    "One host, three page looks: index (#080b14), build (#0b1110) and accountability (#08110f). site.html checks index.html against the kit and holds the other two to their own theme-color, with no color-scheme expected (none of the three declares one today).",
+    "The toolkit's projects/README.md lists this repository's media/ as the 'KINGDOM media' project; this folder would become that project's home.",
+    "/favicon.ico answers 404 (review 2026-11-02 §3.1): the pages link icon.svg and the apple-touch icon only. This host is in neither KINGDOM-OS sites.json nor REGISTRY (same review)."
+  ]
+}
